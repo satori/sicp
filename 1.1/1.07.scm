@@ -1,4 +1,4 @@
-; Copyright (C) 2013 by Maxim Bublis <b@codemonkey.ru>
+; Copyright (C) 2013, 2015 by Maxim Bublis <b@codemonkey.ru>
 ;
 ; Permission is hereby granted, free of charge, to any person obtaining
 ; a copy of this software and associated documentation files (the
@@ -42,3 +42,12 @@
       (sqrt-iter (improve guess) guess)))
 
   (sqrt-iter 1.0 0))
+
+(sqrt 2)
+;Value: 1.4142135623746899
+
+(sqrt 4)
+;Value: 2.0000000929222947
+
+(sqrt 16)
+;Value: 4.000000000000051

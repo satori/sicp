@@ -1,4 +1,4 @@
-; Copyright (C) 2013 by Maxim Bublis <b@codemonkey.ru>
+; Copyright (C) 2013, 2015 by Maxim Bublis <b@codemonkey.ru>
 ;
 ; Permission is hereby granted, free of charge, to any person obtaining
 ; a copy of this software and associated documentation files (the
@@ -22,7 +22,9 @@
 (define (square x) (* x x))
 
 (define (abs x)
-  (if (< x 0)))
+  (if (< x 0)
+    (- x)
+    x))
 
 (define (cbrt x)
   (define (improve guess)
@@ -39,3 +41,12 @@
       (cbrt-iter (improve guess) guess)))
 
   (cbrt-iter 1.0 0))
+
+(cbrt 2)
+;Value: 1.2599210500177698
+
+(cbrt 27)
+;Value: 3.0000000000000977
+
+(cbrt 64)
+;Value: 4.000000000076121
